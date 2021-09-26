@@ -1,0 +1,13 @@
+version: "3.9"
+services: 
+  p4d:
+    build: "p4d"
+    init: true
+    ports: 
+      - "1666:1666"
+    volumes: 
+      - p4d-config-data:/etc/perforce
+      - p4d-server-data:/opt/perforce/servers
+volumes: 
+  p4d-config-data:
+  p4d-server-data:
